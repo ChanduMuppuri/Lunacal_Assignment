@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Webpage Template with Image Carousel</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <div class="left-side"></div>
+  <div class="container">
+    <div class="top-container">
+      <div class="tabs">
+        <button class="tab-link active" onclick="openTab(event, 'about')">About Me</button>
+        <button class="tab-link" onclick="openTab(event, 'experiences')">Experiences</button>
+        <button class="tab-link" onclick="openTab(event, 'recommended')">Recommended</button>
+      </div>
+      <div id="about" class="tab-content active">
+        <p>
+          <li>
+            Hello, I’m Chandu, a final year B.Tech student at Gayatri Vidya Parishad
+            College of Engineering in Visakhapatnam.
+          </li>
+          <li>
+            As I approach the culmination of my engineering journey, I’m excited aboutthe
+            opportunities ahead and eager to apply the knowledge and skills I’vegained throughout my
+            studies.
+          </li>
+          <li>
+            Looking forward to connecting and exploring new horizons!
+          </li>
+        </p>
+      </div>
+      <div id="experiences" class="tab-content">
+        <p>
+          <li>
+            I have hands-on experience with HTML, CSS, and JavaScript, creating dynamic and responsive web applications.
+          </li>
+          <li>
+            My skills extend to using React to build modern, interactive user interfaces. Through various projects, I’ve
+            developed a solid understanding of front-end development and UI/UX design principles.
+          </li>
+          <li>
+            I am excited to apply these skills in a professional environment and continue learning and growing in web
+            development.
+          </li>
+        </p>
+      </div>
+      <div id="recommended" class="tab-content">
+        <p>
+          <li>
+            For a solid understanding of web development, check out MDN Web Docs for comprehensive HTML, CSS, and
+            JavaScript guides.
+          </li>
+          <li>
+            Follow the React documentation for up-to-date best practices and tutorials. Additionally,
+            explore freeCodeCamp for hands-on projects and interactive learning.
+          </li>
+        </p>
+
+      </div>
+    </div>
+
+    <div class="bottom-container">
+      <div class="gallery-container">
+        <div class="scroll">
+          <button id="prevBtn" onclick="moveGallery(-1)" disabled>&lt;</button>
+        </div>
+        <div class="gallery">
+          <div class="gallery-track">
+            <img src="imagesF/cat.png" alt="Image 1">
+            <img src="imagesF/dog.jpeg" alt="Image 2">
+          </div>
+        </div>
+        <div class="scroll">
+          <button id="nextBtn" onclick="moveGallery(1)">&gt;</button>
+        </div>
+      </div>
+      <div style="text-align: center; padding: 20px;">
+        <button onclick="document.getElementById('imageInput').click()">+ Add Image</button>
+        <input type="file" id="imageInput" accept="image/*" style="display: none;" onchange="addImage(event)">
+      </div>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
